@@ -26,7 +26,7 @@ function App() {
     <div className="App">
         <h1>Working</h1>
         <p>You clicked {count} times</p>
-        <button className="mainButton" onClick={click} >++</button><br></br>
+        button onClick={()=> setCount(count + 1)} >++</button><br></br>
         <button onClick={()=> setCount(0)} >reset</button>
 
         {count === 1 ? <div>{page1}</div> : null}
