@@ -12,13 +12,21 @@ function App() {
     const [page2, setpage2] = useState(pageTwo)
     const [page3, setpage3] = useState(pageThree)
 
+    const click = () => {
+        if (count >= 3){
+            setCount(0)
+        } else {
+            setCount(count + 1)
+        }
+    }
+
 
 
   return (
     <div className="App">
         <h1>Working</h1>
         <p>You clicked {count} times</p>
-        <button onClick={()=> setCount(count + 1)} >++</button><br></br>
+        <button className="mainButton" onClick={click} >++</button><br></br>
         <button onClick={()=> setCount(0)} >reset</button>
 
         {count === 1 ? <div>{page1}</div> : null}
